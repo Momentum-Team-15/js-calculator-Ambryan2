@@ -1,10 +1,10 @@
-.mastercont{
+.mastercont {
     margin: 40px auto;
     width: 450px;
 }
 
-.boxescont{
-    display:flex;
+.boxescont {
+    display: flex;
     flex-flow: row;
     justify-content: space-evenly;
 }
@@ -20,45 +20,51 @@
     color: white;
     font-size: 40px;
 }
-.lightbox{
+
+.lightbox {
     background-color: lightgreen;
     height: calc(450px/4);
     width: 25%;
-    margin: 1px; 
+    margin: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     font-size: 40px;
 }
-.lightbox:hover{
+
+.lightbox:hover {
     color: white;
 }
-.topelements{
+
+.topelements {
     display: flex;
-    flex-flow: row; 
+    flex-flow: row;
     justify-content: space-evenly;
 }
-.rectbox{
+
+.rectbox {
     background-color: green;
     height: calc(450px/4);
     width: 75%;
-    margin:1px;
+    margin: 1px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     color: white;
-    font-size: 35px;   
+    font-size: 35px;
     padding-right: 1px;
 }
-.displayCont{
+
+.displayCont {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 20px; 
+    padding-right: 20px;
     height: 100%;
     width: 100%;
 }
+
 .specialbox {
     background-color: green;
     height: calc(450px/4);
@@ -70,6 +76,7 @@
     color: white;
     font-size: 40px;
 }
-.specialbox:hover{
+
+.specialbox:hover {
     background-color: lightgreen;
 }
