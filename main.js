@@ -8,7 +8,7 @@ let Calculation = document.querySelector('#display');
 for (let calcButton of calcButtons) {
     //this makes it so javascript knows what button is press
     calcButton.addEventListener('click', (event) => {
-        // console.log(`the number: ${calcButton.innerText}`);
+        // this makes it so calculation.innerText can be read as numbers and so I can manipulate array
         let displayArr = Calculation.innerText;
 
         //This makes sure the numbers that are pressed are displayed in #display
@@ -31,6 +31,15 @@ for (let calcButton of calcButtons) {
                 case "*": Calculation.innerText = Calculation.innerText + "*"; break;
                 case "C": Calculation.innerText = ' '; break;
                 case "=":
+                    //the try evaluates the code. The catch will do something if it detects am error.
+                    try {
+                        let answer = eval(displayArr);
+                    }
+                    catch (err) {
+                        console.log('testworked');
+                        Calculation.innerText = "Invalid Input";
+                    }
+                    //if there are no errors then this will dislay
                     let answer = eval(displayArr);
                     Calculation.innerText = ' ';
                     Calculation.innerText = Calculation.innerText + answer;
