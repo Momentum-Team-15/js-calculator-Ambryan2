@@ -12,7 +12,7 @@ for (let calcButton of calcButtons) {
         let displayArr = Calculation.innerText;
 
         //This makes sure the numbers that are pressed are displayed in #display
-        if (displayArr.length <= 18) {
+        if (displayArr.length <=16) {
             switch (calcButton.id) {
                 case "0": Calculation.innerText = Calculation.innerText + 0; break;
                 case "1": Calculation.innerText = Calculation.innerText + 1; break;
