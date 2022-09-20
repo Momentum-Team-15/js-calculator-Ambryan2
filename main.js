@@ -9,6 +9,8 @@ for (let calcButton of calcButtons) {
     //this makes it so javascript knows what button is press
     calcButton.addEventListener('click', (event) => {
         console.log(`the number: ${calcButton.innerText}`);
+        let displayArr = Calculation.innerText;
+        
 
         //This makes sure the numbers that are pressed are displayed in #display
         switch (calcButton.id) {
@@ -22,28 +24,16 @@ for (let calcButton of calcButtons) {
             case "7": Calculation.innerText = Calculation.innerText + 7; break;
             case "8": Calculation.innerText = Calculation.innerText + 8; break;
             case "9": Calculation.innerText = Calculation.innerText + 9; break;
-            case "+": Calculation.innerText = Calculation.innerText + " + "; break;
-            case "-": Calculation.innerText = Calculation.innerText + " - "; break;
-            case "/": Calculation.innerText = Calculation.innerText + " / "; break;
+            case "+": Calculation.innerText = Calculation.innerText + "+"; break;
+            case "-": Calculation.innerText = Calculation.innerText + "-"; break;
+            case "/": Calculation.innerText = Calculation.innerText + "/"; break;
             case ".": Calculation.innerText = Calculation.innerText + "."; break;
-            case "*": Calculation.innerText = Calculation.innerText + " * "; break;
+            case "*": Calculation.innerText = Calculation.innerText + "*"; break;
+            case "C": Calculation.innerText = ' ';break;
+            case "=": let answer = eval(displayArr);
+            Calculation.innerText = ' ';
+            Calculation.innerText = Calculation.innerText + answer;break;
         }
-        //make sure that numbers pressed are saved to be manipulated with math expressions
-        //making an array that can be manipulated
-        let displayArr = Calculation.innerText;
-        //since array doesn't read the special characters I plan on having calculator take everything before symbol and do the symbol act to everything after
-        // console.log(eval(displayArr))
-
-
-
-        // if (calcButton.id === "1")
-        //     {
-        //         Calculation.innerText = Calculation.innerText + 1;
-        //     }
-        // else if (calcButton.id === "2")
-        //     {
-        //         Calculation.innerText = Calculation.innerText + 2;
-        //     }
 
     })
 
