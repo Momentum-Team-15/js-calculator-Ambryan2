@@ -28,8 +28,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     font-size: 40px;
+}
+.lightbox:hover{
+    color: white;
 }
 .topelements{
     display: flex;
@@ -56,7 +59,7 @@
     height: 100%;
     width: 100%;
 }
-.topbox {
+.specialbox {
     background-color: green;
     height: calc(450px/4);
     width: 25%;
@@ -66,5 +69,7 @@
     align-items: center;
     color: white;
     font-size: 40px;
-
+}
+.specialbox:hover{
+    background-color: lightgreen;
 }

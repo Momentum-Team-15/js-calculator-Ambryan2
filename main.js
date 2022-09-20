@@ -8,7 +8,7 @@ let Calculation = document.querySelector('#display');
 for (let calcButton of calcButtons) {
     //this makes it so javascript knows what button is press
     calcButton.addEventListener('click', (event) => {
-        console.log(`the number: ${calcButton.innerText}`);
+        // console.log(`the number: ${calcButton.innerText}`);
         let displayArr = Calculation.innerText;
         
 
@@ -39,6 +39,3 @@ for (let calcButton of calcButtons) {
 
 }
 
-
-//2. make it so multiple numbers can be added until the = is pressed
-//3. when equal is pressed clear display and display the output 
