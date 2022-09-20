@@ -12,6 +12,7 @@ for (let calcButton of calcButtons) {
         let displayArr = Calculation.innerText;
 
         //This makes sure the numbers that are pressed are displayed in #display
+        if (displayArr.length <= 18){
         switch (calcButton.id) {
             case "0": Calculation.innerText = Calculation.innerText + 0; break;
             case "1": Calculation.innerText = Calculation.innerText + 1; break;
@@ -35,6 +36,19 @@ for (let calcButton of calcButtons) {
                 Calculation.innerText = Calculation.innerText + answer;
                 break;
         }
+        }
+        else {
+            switch (calcButton.id){
+            case "C": Calculation.innerText = ' ';break;
+            case "=":
+                let answer = eval(displayArr);
+                Calculation.innerText = ' ';
+                Calculation.innerText = Calculation.innerText + answer;
+                break;
+            }
+        }
+    
+        console.log(Calculation.innerText)
 
     })
 
