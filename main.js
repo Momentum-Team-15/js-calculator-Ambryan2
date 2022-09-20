@@ -41,8 +41,10 @@ for (let calcButton of calcButtons) {
                     }
                     //if there are no errors then this will dislay
                     let answer = eval(displayArr);
+                    //toFixed in this instance rounds decimals to the third
+                    let rounded = answer.toFixed(3);
                     Calculation.innerText = ' ';
-                    Calculation.innerText = Calculation.innerText + answer;
+                    Calculation.innerText = Calculation.innerText + rounded;
                     break;
             }
         }
