@@ -41,8 +41,8 @@ for (let calcButton of calcButtons) {
                     }
                     //if there are no errors then everything until bracket will dislay 
                     let answer = eval(displayArr);
-                    //toFixed in this instance rounds decimals to the third
-                    let rounded = answer.toFixed(3);
+                    //toFixed in this instance rounds decimals to the second
+                    let rounded = answer.toFixed(2);
                     Calculation.innerText = ' ';
                     Calculation.innerText = Calculation.innerText + rounded;
                     break;
@@ -50,6 +50,7 @@ for (let calcButton of calcButtons) {
         }
         //in rare case the string goes one over due to .length it will still do these buttons
         else {
+            Calculation.innerText = 'Too long'
             switch (calcButton.id) {
                 case "C": Calculation.innerText = ' '; break;
                 case "=":
