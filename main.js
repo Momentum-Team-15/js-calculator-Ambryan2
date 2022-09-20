@@ -39,15 +39,30 @@ for (let calcButton of calcButtons) {
                         console.log('testworked');
                         Calculation.innerText = "Invalid Input";
                     }
-                    //if there are no errors then everything until bracket will dislay 
+                    //evaluates if answer has period if it does then does one thing if doesn't do other thing
                     let answer = eval(displayArr);
-                    //toFixed in this instance rounds decimals to the second
-                    let rounded = answer.toFixed(2);
-                    Calculation.innerText = ' ';
-                    Calculation.innerText = Calculation.innerText + rounded;
+                    //this checks if the number is a decimal
+                    if (answer % 1 !== 0){
+                        console.log('test worked for decimal')
+                        let rounded = answer.toFixed(2);
+                        Calculation.innerText = ' ';
+                        Calculation.innerText = Calculation.innerText + rounded;
+                    }
+                    else {
+                        console.log('solid numbers worked')
+                        Calculation.innerText = ' ';
+                        Calculation.innerText = Calculation.innerText + answer;
+                    }
+                    //The following until breaks is what will be displayed
                     break;
             }
         }
+        //if things break
+        // let answer = eval(displayArr);
+        // let rounded = answer.toFixed(2);
+        // Calculation.innerText = ' ';
+        // Calculation.innerText = Calculation.innerText + rounded;
+
         //in rare case the string goes one over due to .length it will still do these buttons
         else {
             Calculation.innerText = 'Too long'
