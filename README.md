@@ -30,6 +30,7 @@ You do not have to allow for chaining long calculations (like `2 + 4 * 7 - 2`), 
 
 **Hint**: One way of evaluating mathematical expressions is [eval](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). Another way is by using the [math.js](http://mathjs.org/) library.
 
+
 ### Bonus steps
 
 You should find the above project challenging. However, if you complete it, here are more features you should attempt to add in.
@@ -42,3 +43,5 @@ You should find the above project challenging. However, if you complete it, here
 * Add a button for calculating the modulo of two numbers.
 * Add a button for raising a number by a power.
 * Add parentheses to control the order of evaluation.
+
+

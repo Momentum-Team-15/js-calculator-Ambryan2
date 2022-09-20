@@ -14,21 +14,25 @@ for (let calcButton of calcButtons) {
         //This makes sure the numbers that are pressed are displayed in #display
         if (displayArr.length <= 16) {
             switch (calcButton.id) {
-                case "0": Calculation.innerText = Calculation.innerText + 0; break;
-                case "1": Calculation.innerText = Calculation.innerText + 1; break;
-                case "2": Calculation.innerText = Calculation.innerText + 2; break;
-                case "3": Calculation.innerText = Calculation.innerText + 3; break;
-                case "4": Calculation.innerText = Calculation.innerText + 4; break;
-                case "5": Calculation.innerText = Calculation.innerText + 5; break;
-                case "6": Calculation.innerText = Calculation.innerText + 6; break;
-                case "7": Calculation.innerText = Calculation.innerText + 7; break;
-                case "8": Calculation.innerText = Calculation.innerText + 8; break;
-                case "9": Calculation.innerText = Calculation.innerText + 9; break;
-                case "+": Calculation.innerText = Calculation.innerText + "+"; break;
-                case "-": Calculation.innerText = Calculation.innerText + "-"; break;
-                case "/": Calculation.innerText = Calculation.innerText + "/"; break;
-                case ".": Calculation.innerText = Calculation.innerText + "."; break;
-                case "*": Calculation.innerText = Calculation.innerText + "*"; break;
+                //this does everything highlighted below because of .target
+                default: Calculation.innerText += event.target.innerText; break;
+                
+                // case "0": Calculation.innerText = Calculation.innerText + 0; break;
+                // case "1": Calculation.innerText = Calculation.innerText + 1; break;
+                // case "2": Calculation.innerText = Calculation.innerText + 2; break;
+                // case "3": Calculation.innerText = Calculation.innerText + 3; break;
+                // case "4": Calculation.innerText = Calculation.innerText + 4; break;
+                // case "5": Calculation.innerText = Calculation.innerText + 5; break;
+                // case "6": Calculation.innerText = Calculation.innerText + 6; break;
+                // case "7": Calculation.innerText = Calculation.innerText + 7; break;
+                // case "8": Calculation.innerText = Calculation.innerText + 8; break;
+                // case "9": Calculation.innerText = Calculation.innerText + 9; break;
+                // case "+": Calculation.innerText = Calculation.innerText + "+"; break;
+                // case "-": Calculation.innerText = Calculation.innerText + "-"; break;
+                // case "/": Calculation.innerText = Calculation.innerText + "/"; break;
+                // case ".": Calculation.innerText = Calculation.innerText + "."; break;
+                // case "*": Calculation.innerText = Calculation.innerText + "*"; break;
+                
                 case "C": Calculation.innerText = ' '; break;
                 case "=":
                     //the try evaluates the code. The catch will do something if it detects am error.
@@ -57,11 +61,6 @@ for (let calcButton of calcButtons) {
                     break;
             }
         }
-        //if things break
-        // let answer = eval(displayArr);
-        // let rounded = answer.toFixed(2);
-        // Calculation.innerText = ' ';
-        // Calculation.innerText = Calculation.innerText + rounded;
 
         //in rare case the string goes one over due to .length it will still do these buttons
         else {
