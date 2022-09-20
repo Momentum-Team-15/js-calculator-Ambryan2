@@ -10,7 +10,6 @@ for (let calcButton of calcButtons) {
     calcButton.addEventListener('click', (event) => {
         // console.log(`the number: ${calcButton.innerText}`);
         let displayArr = Calculation.innerText;
-        
 
         //This makes sure the numbers that are pressed are displayed in #display
         switch (calcButton.id) {
@@ -30,9 +29,11 @@ for (let calcButton of calcButtons) {
             case ".": Calculation.innerText = Calculation.innerText + "."; break;
             case "*": Calculation.innerText = Calculation.innerText + "*"; break;
             case "C": Calculation.innerText = ' ';break;
-            case "=": let answer = eval(displayArr);
-            Calculation.innerText = ' ';
-            Calculation.innerText = Calculation.innerText + answer;break;
+            case "=":
+                let answer = eval(displayArr);
+                Calculation.innerText = ' ';
+                Calculation.innerText = Calculation.innerText + answer;
+                break;
         }
 
     })
