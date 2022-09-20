@@ -22,11 +22,11 @@ for (let calcButton of calcButtons) {
             case "7": Calculation.innerText = Calculation.innerText + 7; break;
             case "8": Calculation.innerText = Calculation.innerText + 8; break;
             case "9": Calculation.innerText = Calculation.innerText + 9; break;
-            case "+": Calculation.innerText = Calculation.innerText + "+"; break;
-            case "-": Calculation.innerText = Calculation.innerText + "-"; break;
-            case "/": Calculation.innerText = Calculation.innerText + "/"; break;
+            case "+": Calculation.innerText = Calculation.innerText + " + "; break;
+            case "-": Calculation.innerText = Calculation.innerText + " - "; break;
+            case "/": Calculation.innerText = Calculation.innerText + " / "; break;
             case ".": Calculation.innerText = Calculation.innerText + "."; break;
-            case "*": Calculation.innerText = Calculation.innerText + "*"; break;
+            case "*": Calculation.innerText = Calculation.innerText + " * "; break;
         }
         //make sure that numbers pressed are saved to be manipulated with math expressions
         //making an array that can be manipulated
