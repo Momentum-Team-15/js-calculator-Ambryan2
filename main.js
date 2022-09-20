@@ -12,7 +12,7 @@ for (let calcButton of calcButtons) {
         let displayArr = Calculation.innerText;
 
         //This makes sure the numbers that are pressed are displayed in #display
-        if (displayArr.length <=16) {
+        if (displayArr.length <= 16) {
             switch (calcButton.id) {
                 case "0": Calculation.innerText = Calculation.innerText + 0; break;
                 case "1": Calculation.innerText = Calculation.innerText + 1; break;
@@ -39,7 +39,7 @@ for (let calcButton of calcButtons) {
                         console.log('testworked');
                         Calculation.innerText = "Invalid Input";
                     }
-                    //if there are no errors then this will dislay
+                    //if there are no errors then everything until bracket will dislay 
                     let answer = eval(displayArr);
                     //toFixed in this instance rounds decimals to the third
                     let rounded = answer.toFixed(3);
