@@ -14,7 +14,7 @@ for (let calcButton of calcButtons) {
         //This makes sure the numbers that are pressed are displayed in #display
         if (displayArr.length <= 16) {
             switch (calcButton.id) {
-                //this does everything highlighted below because of .target
+                //this does everything highlighted below because of .target by scottie
                 default: Calculation.innerText += event.target.innerText; break;
                 
                 // case "0": Calculation.innerText = Calculation.innerText + 0; break;
@@ -31,8 +31,7 @@ for (let calcButton of calcButtons) {
                 // case "-": Calculation.innerText = Calculation.innerText + "-"; break;
                 // case "/": Calculation.innerText = Calculation.innerText + "/"; break;
                 // case ".": Calculation.innerText = Calculation.innerText + "."; break;
-                // case "*": Calculation.innerText = Calculation.innerText + "*"; break;
-                
+                case "*": Calculation.innerText = Calculation.innerText + "*"; break;
                 case "C": Calculation.innerText = ' '; break;
                 case "=":
                     //the try evaluates the code. The catch will do something if it detects am error.
